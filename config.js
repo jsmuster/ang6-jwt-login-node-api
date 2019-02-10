@@ -1,0 +1,4 @@
+// exporting a secret that will be read by the JWT library
+module.exports = {
+  secret: '\x0b\x82\n\x98\xc0\xfc]\x07\xc9\x1a6\xe7\xfb\xd9\x10\xbeJ=& \xa7\xe2\xaa\xf7'
+};
