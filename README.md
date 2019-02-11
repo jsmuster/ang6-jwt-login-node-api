@@ -16,3 +16,8 @@ Start debug mode via
 Or
 
 `npm start`
+
+## UI Server
+
+The UI for this project, which needs to be running for the project to function properly:
+https://github.com/jsmuster/ang6-jwt-login
