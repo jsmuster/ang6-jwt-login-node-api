@@ -79,10 +79,10 @@ router.post('/add', defense.validateToken, async (req, res, next) =>
 	}
 });
 
-router.use('/:id', defense.validateToken);
+router.use('/login/:id', defense.validateToken);
 
 /* retrieves a user by user_name */
-router.get('/:id', async (req, res, next) =>
+router.get('/login/:id', async (req, res, next) =>
 {
 	try
 	{
@@ -101,7 +101,7 @@ router.get('/:id', async (req, res, next) =>
 });
 
 /* updates the user by user_name */
-router.put('/:id', async (req, res, next) =>
+router.put('/login/:id', async (req, res, next) =>
 {
 	try
 	{
@@ -120,7 +120,7 @@ router.put('/:id', async (req, res, next) =>
 });
 
 /* removes the user from the user list by user_name */
-router.delete('/:id', async (req, res, next) =>
+router.delete('/login/:id', async (req, res, next) =>
 {
 	try
 	{
