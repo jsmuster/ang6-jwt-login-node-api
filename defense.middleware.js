@@ -6,15 +6,15 @@ const config = require('./config.js');
 let validateToken = (req, res, next) => 
 {
   	let token = req.headers['x-access-token'] || req.headers['authorization']; // Express headers are auto converted to lowercase
-  	debugger;
-	// Remove Bearer from string
-	if(token.startsWith('Bearer '))
-	{
-		token = token.slice(7, token.length);
-	}
-
+  	
 	if(token != null)
 	{
+		// Remove Bearer from string
+		if(token.startsWith('Bearer '))
+		{
+			token = token.slice(7, token.length);
+		}
+		
 		jwt.verify(token, config.secret, (err, decoded) => {
 
 			if(err)
